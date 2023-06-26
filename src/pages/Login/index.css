@@ -1,0 +1,29 @@
+.loginHeading {
+  color: #fff;
+  font-size: 154px;
+  font-family: Livvic;
+  font-weight: 250;
+  text-transform: uppercase;
+}
+
+.loginInput {
+  display: block;
+  width: 100%;
+  margin: 20px 0 0 0;
+  background-color: black;
+  padding: 10px 20px;
+  border: #b9b9b9 solid 1px;
+  border-radius: 5px;
+  font-weight: 300;
+}
+
+.loginButton {
+  background-color: #fff;
+  color: black;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 5px;
+}
