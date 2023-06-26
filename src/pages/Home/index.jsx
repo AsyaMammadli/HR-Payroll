@@ -1,5 +1,7 @@
+import "./index.css";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <div>Dashboard</div>;
 };
 
 export default Home;

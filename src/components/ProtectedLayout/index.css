@@ -1,0 +1,34 @@
+header {
+  height: 80px;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  display: flex;
+  padding: 0 16px;
+}
+
+aside {
+  width: 256px;
+  position: fixed;
+  border-right: 1px solid grey;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+main {
+  margin-left: 256px;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid grey;
+  justify-content: center;
+}
+div.container {
+  padding: 16px;
+}
+
+.searchInput {
+}

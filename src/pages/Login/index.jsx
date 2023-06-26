@@ -1,5 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 import "./index.css";
 const Login = () => {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/");
+  }
   return (
     <div className="flex justify-center items-center">
       <div>
@@ -11,7 +18,9 @@ const Login = () => {
             <span>Forget password?</span>
             <span>Registration</span>
           </div>
-          <button className="loginButton">Login</button>
+          <button className="loginButton" onClick={handleClick}>
+            Login
+          </button>
         </div>
       </div>
     </div>
