@@ -1,0 +1,20 @@
+.blueCircle {
+  background-color: #4fd5ff;
+  border-radius: 50%;
+  left: -350px;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  height: 100vh;
+}
+.greenCircle {
+  background-color: #bff3c1;
+  border-radius: 50%;
+  top: 25%;
+
+  left: 50px;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  z-index: 999;
+}
