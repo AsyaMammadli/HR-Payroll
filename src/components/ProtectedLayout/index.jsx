@@ -1,13 +1,44 @@
 import { Outlet } from "react-router";
-import { Link } from "react-router-dom";
 import Star from "../../assets/Star2.svg";
 import Search from "../../assets/search-normal.svg";
 import SettingsImg from "../../assets/settingpic.svg";
 import NotificationImg from "../../assets/notification.svg";
 import ProfileImg from "../../assets/profilepic.png";
-// import SidebarLink from "../../SidebarLink";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
+
 const ProtectedLayout = () => {
+  const navigate = useNavigate();
+
+  function logout() {
+    navigate("/login");
+  }
+  const sidebarLinks = [
+    {
+      path: "/",
+      text: "Dashboard",
+      icon: "fa-solid fa-gauge-high",
+    },
+    {
+      path: "/employees",
+      text: "Employees",
+      icon: "fa-solid fa-envelope-open-text",
+    },
+    {
+      path: "/salaries",
+      text: "Salaries",
+      icon: "fa-solid fa-calendar-days",
+    },
+  ];
+
+  const [activeLink, setActiveLink] = useState(0);
+
+  const location = useLocation();
+  const path = location.pathname;
+  const activeLinkIndex = sidebarLinks.findIndex((link) => link.path === path);
+
   return (
     <>
       <aside>
@@ -17,18 +48,18 @@ const ProtectedLayout = () => {
           <span className="font-bold pl-2">TalentCore</span>
         </div>
         <div className="sidebarLinks">
-          <div className="sidebarlink active">
-            <i className="fa-solid fa-gauge-high"></i>
-            <Link to="/">Dashboard</Link>
-          </div>
-          <div className="sidebarlink">
-            <i className="fa-solid fa-envelope-open-text"></i>
-            <Link to="/employees">Employees</Link>
-          </div>
-          <div className="sidebarlink">
-            <i className="fa-solid fa-calendar-days"></i>
-            <Link to="/salaries">Salaries</Link>
-          </div>
+          {sidebarLinks.map((link, index) => (
+            <div
+              key={index}
+              className={`sidebarlink ${
+                index === activeLinkIndex ? "active" : ""
+              }`}
+              onClick={() => setActiveLink(index)}
+            >
+              <i className={`fa-solid ${link.icon}`}></i>
+              <Link to={link.path}>{link.text}</Link>
+            </div>
+          ))}
         </div>
       </aside>
 
@@ -51,7 +82,12 @@ const ProtectedLayout = () => {
               <img src={NotificationImg} alt="Notifications" />
             </li>
             <li>
-              <img src={ProfileImg} alt="Profile" />
+              <img
+                src={ProfileImg}
+                alt="Profile"
+                onClick={logout}
+                className="cursor-pointer"
+              />
             </li>
           </ul>
         </header>

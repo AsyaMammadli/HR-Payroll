@@ -2,7 +2,7 @@
   background-color: #4fd5ff;
   border-radius: 50%;
   left: -350px;
-  position: relative;
+  position: fixed;
   width: 600px;
   height: 600px;
   height: 100vh;
