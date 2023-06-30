@@ -6,7 +6,7 @@
 .dashboardWelcome {
   position: absolute;
   left: 45%;
-  top: 40%;
+  top: 25%;
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 27px;
@@ -16,4 +16,47 @@
 .divider {
   margin-top: 10px;
   border-bottom: 1px solid #272727;
+}
+
+.rectangle {
+  display: flex;
+  border-radius: 15px;
+  width: 315px;
+  /* height: 58px; */
+  backdrop-filter: blur(38px);
+  position: relative;
+}
+.rectangleContent {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rectangle:nth-child(1) {
+  background: rgba(41, 197, 238, 0.15);
+}
+.rectangle:nth-child(2) {
+  background-color: rgba(207, 26, 44, 0.15);
+}
+.rectangle:nth-child(3) {
+  background: rgba(234, 176, 77, 0.2);
+}
+
+.rectangle:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(38px);
+  background-size: 100vw auto;
+}
+.leftborderdiv {
+  width: 5.823px;
+
+  border-radius: 15.528px 0px 0px 15.528px;
+  background: #29c5ee;
 }

@@ -31,6 +31,41 @@ const ProtectedLayout = () => {
       text: "Salaries",
       icon: "fa-solid fa-calendar-days",
     },
+    {
+      path: "/training",
+      text: "Training",
+      icon: "fa-solid fa-briefcase",
+    },
+    {
+      path: "/evaluation",
+      text: "Evaluation",
+      icon: "fa-solid fa-user-group",
+    },
+    {
+      path: "/recruitment-and-selection",
+      text: "Recruitment and selection",
+      icon: "fa-solid fa-user-group",
+    },
+    {
+      path: "/leave-permission",
+      text: "Leave permission",
+      icon: "fa-solid fa-network-wired",
+    },
+    {
+      path: "/employee-complaints",
+      text: "Employee complaints",
+      icon: "fa-solid fa-user",
+    },
+    {
+      path: "/employee-performance",
+      text: "Employee performance",
+      icon: "fa-solid fa-file-lines",
+    },
+    {
+      path: "/health-and-safety",
+      text: "Health and Safety",
+      icon: "fa-solid fa-square-poll-vertical",
+    },
   ];
 
   const [activeLink, setActiveLink] = useState(0);

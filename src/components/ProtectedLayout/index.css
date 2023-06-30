@@ -8,7 +8,7 @@ header {
 }
 
 aside {
-  width: 256px;
+  width: 350px;
   position: fixed;
   border-right: 1px solid #272727;
   left: 0;
@@ -16,7 +16,7 @@ aside {
   height: 100vh;
 }
 main {
-  margin-left: 256px;
+  margin-left: 350px;
   height: 100vh;
 }
 
@@ -69,7 +69,7 @@ div.container {
 }
 
 .sidebarLinks {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .sidebarlink {
   padding: 20px 40px;
