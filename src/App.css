@@ -1,3 +1,30 @@
 #root {
   height: 100%;
 }
+
+.customTable {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+}
+.customTable tr th {
+  padding: 10px;
+}
+.customTable tr:first-child {
+  border-radius: 20px;
+  background-color: #262626;
+}
+.customTable td {
+  border-bottom: 0.3px solid grey;
+  padding: 10px;
+}
+
+.customTable th:first-child {
+  border-radius: 15px 0 0 15px;
+}
+.customTable th:last-child {
+  border-radius: 0 15px 15px 0;
+}

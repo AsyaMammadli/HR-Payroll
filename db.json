@@ -1,0 +1,149 @@
+{
+    "employees": [
+      {
+        "id": "00123",
+        "name": "Davin Putra F",
+        "status": "Permanent",
+        "position": "Sr. UX Designer",
+        "login": "12/02/20",
+        "applicationDate": "3 files"
+      },
+        {
+        "id": "00124",
+        "name": "Amalia putri",
+        "status": "Permanent",
+        "position": "Financial Analyst",
+        "login": "04/01/20",
+        "applicationDate": "2 files"
+      },
+        {
+        "id": "00125",
+        "name": "Sakanti Dwi",
+        "status": "Permanent",
+        "position": "Financial Analyst",
+        "login": "05/03/20",
+        "applicationDate": "3 files"
+      },
+        {
+        "id": "00126",
+        "name": "Ria Kusuma",
+        "status": "Permanent",
+        "position": "Sr. UX Designer",
+        "login": "24/12/21",
+        "applicationDate": "2 files"
+      },
+        {
+        "id": "00127",
+        "name": "Shofil Fuadi",
+        "status": "Permanent",
+        "position": "Growth Manager",
+        "login": "18/02/22",
+        "applicationDate": "1 files"
+      }
+    ],
+
+
+    "salary": [
+ {
+        "id": "00123",
+        "name": "Davin Putra F",
+        "position": "Sr. UX Designer",
+        "salary": "Rp.5.000.000",
+        "transport": "Rp. 300.000",
+        "mealAllowance": "Rp. 300.000",
+        "discount": "-",
+        "totalSalary": "Rp.5.600.000"
+      },
+        {
+        "id": "00124",
+        "name": "Amalia putri",
+        "position": "Financial Analyst",
+        "salary": "Rp.6.000.000",
+        "transport": "Rp. 300.000",
+        "mealAllowance": "Rp. 300.000",
+        "discount": "-",
+        "totalSalary": "Rp.6.600.000"
+      },
+        {
+        "id": "00125",
+        "name": "Sakanti Dwi",
+        "position": "Financial Analyst",
+        "salary": "Rp.6.000.000",
+        "transport": "Rp. 300.000",
+        "mealAllowance": "Rp. 300.000",
+        "discount": "Rp. 100.000",
+        "totalSalary": "Rp.6.500.000"
+      },
+        {
+        "id": "00126",
+        "name": "Ria Kusuma ",
+        "position": "Sr. UX Designer",
+        "salary": "Rp.5.000.000",
+        "transport": "Rp. 300.000",
+        "mealAllowance": "Rp. 300.000",
+        "discount": "-",
+        "totalSalary": "Rp.5.600.000"
+      },
+        {
+        "id": "00127",
+        "name": "Shofil Fuadi",
+        "position": "Growth Manager",
+        "salary": "Rp.4.000.000",
+        "transport": "Rp. 300.000",
+        "mealAllowance": "Rp. 300.000",
+        "discount": "Rp. 200.000",
+        "totalSalary": "Rp.4.900.000"
+      }
+    ],
+
+
+
+    "training": [
+      {
+        "trainingCode": "DSG001",
+        "name": "Davin Putra F",
+        "id": "00123",
+        "topic": "Basic Human Resources Management",
+        "teacher": "Sr. UX Designer",
+        "trainingDate": "12/02/23",
+        "taken": true
+      },
+       {
+        "trainingCode": "FA001",
+        "name": "Amalia putri",
+        "id": "00124",
+        "topic": "HR for non HR Management",
+        "teacher": "Financial Analyst",
+        "trainingDate": "04/01/23",
+        "taken": true
+      },
+      {
+        "trainingCode": "FA002",
+        "name": "Sakanti Dwi",
+        "id": "00125",
+        "topic": "Human Resources Business Partner",
+        "teacher": "Financial Analyst",
+        "trainingDate": "05/03/23",
+        "taken": true
+      },
+      {
+        "trainingCode": "DSG002",
+        "name": "Ria Kusuma",
+        "id": "00126",
+        "topic": "Negotiation Skill for HR",
+        "teacher": "Sr. UX Designer",
+        "trainingDate": "24/12/23",
+        "taken": true
+      },
+      {
+        "trainingCode": "HR001",
+        "name": "Shofil Fuadi",
+        "id": "00127",
+        "topic": "Recruitment & Selection Staff",
+        "teacher": "Growth Manager",
+        "trainingDate": "18/02/23",
+        "taken": false
+      } 
+    ]
+
+  }
