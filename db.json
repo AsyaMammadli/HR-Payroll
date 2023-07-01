@@ -96,8 +96,6 @@
       }
     ],
 
-
-
     "training": [
       {
         "trainingCode": "DSG001",
@@ -144,6 +142,67 @@
         "trainingDate": "18/02/23",
         "taken": false
       } 
-    ]
+    ],
 
+    "recruitment-and-selection": [
+  {
+        "id":1, 
+        "vacancyDetails": {
+          "vacancy" : "Web Design",
+          "education" : "D3",
+          "validUntil" : "30 July 2023",
+          "requirement" : "3 people"
+        },
+        "information": "Male min 20 years old",
+        "skills": ["Web Developer (Wajib)", "Analyst Data (Wajib)", "Android Programmer"]
+      },
+
+    {
+        "id":2,
+        "vacancyDetails": {
+          "vacancy" : "Graphic Design",
+          "education" : "D3",
+          "validUntil" : "24 July 2023",
+          "requirement" : "2 people"
+        },
+        "information": "Fresh Graduates",
+        "skills": ["Critical Thinking (Wajib)", "Think Creatively (Wajib)"]
+      }
+    ],
+
+  "permission": [
+ {
+        "letterCode": "CUTI001",
+        "dateFiled": "15/04/20",
+        "name": "Shofil Fuadi",
+        "id": "Basic Human Resources Management",
+        "reason": "Eid holiday",
+        "start": "19/04/20",
+        "expire": "26/04/20",
+        "status": "Approved",
+        "option": "PRINT LEAVE LETTER"
+      },
+      {
+        "letterCode": "CUTI002",
+        "dateFiled": "11/04/20",
+        "name": "Sakanti Dwi",
+        "id": "00125",
+        "reason": "Sick",
+        "start": "11/04/20",
+        "expire": "15/04/20",
+        "status": "Approved",
+        "option": "PRINT LEAVE LETTER"
+      },
+      {
+        "letterCode": "CUTI003",
+        "dateFiled": "13/04/20",
+        "name": "Ria Kusuma ",
+        "id": "00126",
+        "reason": "Honeymoon holiday",
+        "start": "15/04/20",
+        "expire": "17/02/20",
+        "status": "Rejected",
+        "option": "PRINT LEAVE LETTER"
+      }
+ ]
   }

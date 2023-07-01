@@ -34,7 +34,13 @@ const Training = () => {
             <td>{user.topic}</td>
             <td>{user.teacher}</td>
             <td>{user.trainingDate}</td>
-            <td>{user.taken == true ? "yes" : "no"}</td>
+            <td>
+              {user.taken == true ? (
+                <div className="bg-red-500 rounded-md">Yes</div>
+              ) : (
+                <div className="bg-green-500 rounded-md">No</div>
+              )}
+            </td>
           </tr>
         ))}
       </table>
