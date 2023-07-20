@@ -7,10 +7,17 @@ const LeavePermission = () => {
   const baseURL = "http://localhost:3000/permission";
   const [users, setUsers] = useState(null);
 
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
+  const fetchPermissions = async () => {
+    try {
+      let response = await axios.get(baseURL);
       setUsers(response.data);
-    });
+    } catch (error) {
+      console.error(error);
+      alert("Error: " + error.message);
+    }
+  };
+  useEffect(() => {
+    fetchPermissions();
   }, []);
 
   if (!users) return null;
@@ -39,20 +46,34 @@ const LeavePermission = () => {
             <td>{user.start}</td>
             <td>{user.expire}</td>
             <td>
-              <Link
-                className="block bg-green-500 rounded-md my-2"
-                to={`edit/${users.status}`}
-              >
-                Approved
-              </Link>
-              <Link
-                className="block bg-red-500 rounded-md my-2"
-                to={`delete/${users.status}`}
-              >
-                Rejected
-              </Link>
+              {user.status == "Approved" && (
+                <div className="block bg-green-500 rounded-md my-2">
+                  Approved
+                </div>
+              )}
+
+              {user.status == "Rejected" && (
+                <div className="block bg-red-500 rounded-md my-2">Rejected</div>
+              )}
+
+              <select className="text-black">
+                <option value="approved" selected={user.status === "Approved"}>
+                  Approved
+                </option>
+                <option value="rejected" selected={user.status === "Rejected"}>
+                  Rejected
+                </option>
+              </select>
             </td>
-            <td>{user.option}</td>
+
+            <td>
+              {user.status == "Approved" && (
+                <div className="bg-blue-500 rounded-md my-2">{user.option}</div>
+              )}
+              {user.status == "Rejected" && (
+                <div className="bg-gray-500 rounded-md my-2">{user.option}</div>
+              )}
+            </td>
           </tr>
         ))}
       </table>
