@@ -9,7 +9,7 @@ import { useState } from "react";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
 
-const ProtectedLayout = () => {
+const PrivateLayout = () => {
   const navigate = useNavigate();
 
   function logout() {
@@ -135,4 +135,4 @@ const ProtectedLayout = () => {
   );
 };
 
-export default ProtectedLayout;
+export default PrivateLayout;

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import "./index.css";
 
-const NonProtectedLayout = () => {
+const PublicLayout = () => {
   return (
     <main>
       <div className="blueCircle">
@@ -14,4 +14,4 @@ const NonProtectedLayout = () => {
   );
 };
 
-export default NonProtectedLayout;
+export default PublicLayout;

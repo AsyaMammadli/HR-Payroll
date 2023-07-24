@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Employees from "./pages/Employees";
-import ProtectedLayout from "./components/ProtectedLayout";
-import NonProtectedLayout from "./components/NonProtectedLayout";
+import PrivateLayout from "./components/PrivateLayout";
+import PublicLayout from "./components/PublicLayout";
 import Salaries from "./pages/Salaries";
 import Training from "./pages/Training";
 import Evaluation from "./pages/Evaluation";
@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ProtectedLayout />}>
+        <Route path="/" element={<PrivateLayout />}>
           <Route index element={<Home />} />
           <Route path="employees" element={<Employees />} />
           <Route path="salaries" element={<Salaries />} />
@@ -41,7 +41,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
 
-        <Route element={<NonProtectedLayout />}>
+        <Route element={<PublicLayout />}>
           <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
