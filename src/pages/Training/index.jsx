@@ -36,9 +36,9 @@ const Training = () => {
             <td>{user.trainingDate}</td>
             <td>
               {user.taken == true ? (
-                <div className="bg-red-500 rounded-md">Yes</div>
+                <div className="bg-green-500 rounded-md">Yes</div>
               ) : (
-                <div className="bg-green-500 rounded-md">No</div>
+                <div className="bg-red-500 rounded-md">No</div>
               )}
             </td>
           </tr>

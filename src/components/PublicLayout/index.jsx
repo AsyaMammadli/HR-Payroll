@@ -7,9 +7,7 @@ const PublicLayout = () => {
       <div className="blueCircle">
         <div className="greenCircle"></div>
       </div>
-      <div>
-        <Outlet />
-      </div>
+      <Outlet />
     </main>
   );
 };

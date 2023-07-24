@@ -8,13 +8,13 @@ const Login = () => {
     navigate("/");
   }
   return (
-    <div className="flex justify-center items-center">
+    <div className="m-auto pt-20 max-w-[600px] h-full">
       <div>
         <h1 className="loginHeading">Login</h1>
         <div>
           <input type="text" className="loginInput" placeholder="Username" />
           <input type="text" className="loginInput" placeholder="Password" />
-          <div className="flex justify-between font-extralight mt-">
+          <div className="flex justify-between font-extralight mt-2">
             <span>Forget password?</span>
             <span>Registration</span>
           </div>
