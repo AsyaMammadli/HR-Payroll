@@ -204,5 +204,39 @@
         "status": "Rejected",
         "option": "PRINT LEAVE LETTER"
       }
- ]
+ ],
+
+"employee-performance":[
+{
+        "id": "00123",
+        "nameSurname": "Davin Putra",
+        "rating": "4.0",
+        "project": "Design Challange",
+        "position": "Sr. UX Designer"
+},
+{       "id": "00124",
+        "nameSurname": "Amalia Putri",
+        "rating": "4.0",
+        "project": "Screening",
+        "position": "Financial Analyst"
+      },
+{       "id": "00125",
+        "nameSurname": "Sakanti Dwi",
+        "rating": "4.0",
+        "project": "Hr Round",
+        "position": "Financial Analyst"
+      },
+      { "id": "00126",
+        "nameSurname": "Ria Kusuma",
+        "rating": "4.0",
+        "project": "Design Challenge",
+        "position": "Sr. UX Designer"
+      },
+      {"id": "00127",
+        "nameSurname": "Shofil Fuadi",
+        "rating": "4.0",
+        "project": "Rejected",
+        "position": "Growth Manager"
+      }  
+]
   }

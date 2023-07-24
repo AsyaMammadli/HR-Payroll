@@ -15,37 +15,46 @@ import LeavePermission from "./pages/LeavePermission";
 import EmployeeComplaints from "./pages/EmployeeComplaints";
 import EmployeePerformance from "./pages/EmployeePerformance";
 import HealthAndSafety from "./pages/HealthAndSafety";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
 
 function App() {
+  Chart.register(CategoryScale);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<PrivateLayout />}>
-          <Route index element={<Home />} />
-          <Route path="employees" element={<Employees />} />
-          <Route path="salaries" element={<Salaries />} />
-          <Route path="training" element={<Training />} />
-          <Route path="evaluation" element={<Evaluation />} />
-          <Route
-            path="recruitment-and-selection"
-            element={<RecruitmentAndSelection />}
-          />
-          <Route path="leave-permission" element={<LeavePermission />} />
-          <Route path="employee-complaints" element={<EmployeeComplaints />} />
-          <Route
-            path="employee-performance"
-            element={<EmployeePerformance />}
-          />
-          <Route path="health-and-safety" element={<HealthAndSafety />} />
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<PrivateLayout />}>
+            <Route index element={<Home />} />
+            <Route path="employees" element={<Employees />} />
+            <Route path="salaries" element={<Salaries />} />
+            <Route path="training" element={<Training />} />
+            <Route path="evaluation" element={<Evaluation />} />
+            <Route
+              path="recruitment-and-selection"
+              element={<RecruitmentAndSelection />}
+            />
+            <Route path="leave-permission" element={<LeavePermission />} />
+            <Route
+              path="employee-complaints"
+              element={<EmployeeComplaints />}
+            />
+            <Route
+              path="employee-performance"
+              element={<EmployeePerformance />}
+            />
+            <Route path="health-and-safety" element={<HealthAndSafety />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Route>
+            <Route path="*" element={<NotFound />} />
+          </Route>
 
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-      </Routes>
-    </Router>
+          <Route element={<PublicLayout />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
