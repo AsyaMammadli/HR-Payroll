@@ -1,7 +1,12 @@
+import { useState, useEffect } from "react";
+import dayjs from "dayjs";
+import { cloneDeep } from "lodash";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+import axios from "axios";
 import PageTitle from "../../components/PageTitle";
 import "./index.css";
-import axios from "axios";
-import { useState, useEffect } from "react";
+
+dayjs.extend(customParseFormat);
 
 const Employees = () => {
   const baseURL = "http://localhost:3000/employees";
@@ -24,7 +29,26 @@ const Employees = () => {
           <th>ID</th>
           <th>Status</th>
           <th>Position</th>
-          <th>Login</th>
+          <th>
+            Login{" "}
+            <span
+              onClick={() => {
+                setUsers((previousData) => {
+                  const data = cloneDeep(previousData);
+                  // artan sira ile
+                  data.sort((f, s) => {
+                    return (
+                      dayjs(f.login, "DD/MM/YY").unix() -
+                      dayjs(s.login, "DD/MM/YY").unix()
+                    );
+                  });
+                  return data;
+                });
+              }}
+            >
+              ^
+            </span>
+          </th>
           <th>APPLICATION DATE</th>
         </tr>
         {users.map((user, index) => (
