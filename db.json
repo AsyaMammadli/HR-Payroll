@@ -179,8 +179,7 @@
         "reason": "Eid holiday",
         "start": "19/04/20",
         "expire": "26/04/20",
-        "status": "Approved",
-        "option": "PRINT LEAVE LETTER"
+        "status": "Approved"
       },
       {
         "letterCode": "CUTI002",
@@ -190,8 +189,7 @@
         "reason": "Sick",
         "start": "11/04/20",
         "expire": "15/04/20",
-        "status": "Approved",
-        "option": "PRINT LEAVE LETTER"
+        "status": "Approved"
       },
       {
         "letterCode": "CUTI003",
@@ -201,8 +199,7 @@
         "reason": "Honeymoon holiday",
         "start": "15/04/20",
         "expire": "17/02/20",
-        "status": "Rejected",
-        "option": "PRINT LEAVE LETTER"
+        "status": "Rejected"
       }
  ],
 

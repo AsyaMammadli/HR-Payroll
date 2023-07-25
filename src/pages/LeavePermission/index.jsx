@@ -67,10 +67,17 @@ const LeavePermission = () => {
 
             <td>
               {user.status == "Approved" && (
-                <div className="bg-blue-500 rounded-md my-2">{user.option}</div>
+                <button
+                  className="bg-blue-500 rounded-md my-2"
+                  onClick={window.print}
+                >
+                  PRINT LEAVE LETTER
+                </button>
               )}
               {user.status == "Rejected" && (
-                <div className="bg-gray-500 rounded-md my-2">{user.option}</div>
+                <button className="bg-gray-500 rounded-md my-2">
+                  PRINT LEAVE LETTER
+                </button>
               )}
             </td>
           </tr>

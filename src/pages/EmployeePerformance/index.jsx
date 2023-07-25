@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import User from "../../assets/User.svg";
 import LineChart from "../../components/LineChart";
+import DoughnutChart from "../../components/DoughnutChart";
 
 const EmployeePerformance = () => {
   const baseURL = "http://localhost:3000/employee-performance";
@@ -53,27 +54,32 @@ const EmployeePerformance = () => {
           </li>
         </ul>
 
-        <table className="customTable">
-          <tr>
-            <th>ID</th>
-            <th>Name Surname</th>
-            <th>Rating</th>
-            <th>Project</th>
-            <th>Position</th>
-          </tr>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.id}</td>
-              <td>{user.nameSurname}</td>
-              <td>{user.rating}</td>
-              <td>{user.project}</td>
-              <td>{user.position}</td>
+        <div className="flex justify-between">
+          <table className="customTable w-7/12">
+            <tr>
+              <th>ID</th>
+              <th>Name Surname</th>
+              <th>Rating</th>
+              <th>Project</th>
+              <th>Position</th>
             </tr>
-          ))}
-        </table>
+            {users.map((user, index) => (
+              <tr key={index}>
+                <td>{user.id}</td>
+                <td>{user.nameSurname}</td>
+                <td>{user.rating}</td>
+                <td>{user.project}</td>
+                <td>{user.position}</td>
+              </tr>
+            ))}
+          </table>
+          <div className="flex justify-center items-center mt-8 w-3/12">
+            <DoughnutChart />
+          </div>
+        </div>
 
-        <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
-          <h1>Line Chart Example</h1>
+        <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
+          <h1>Customer Satisfaction </h1>
           <LineChart />
         </div>
       </>
