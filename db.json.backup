@@ -182,7 +182,10 @@
         "requirement": "2 people"
       },
       "information": "Fresh Graduates",
-      "skills": ["Critical Thinking (Wajib)", "Think Creatively (Wajib)"]
+      "skills": [
+        "Critical Thinking (Wajib)",
+        "Think Creatively (Wajib)"
+      ]
     }
   ],
   "permission": [

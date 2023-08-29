@@ -1,16 +1,15 @@
-import { useNavigate, Link } from "react-router-dom";
-import { useContext, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import Swal from "sweetalert2";
-import AuthContext from "../../context/AuthContext";
+import { BaseApi as axios } from "../../api/axios";
 import "./index.css";
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
   const email = useRef("");
   const password = useRef("");
-  const { login } = useContext(AuthContext);
 
-  const loginSubmit = async () => {
+  const handleRegister = async () => {
     let payload = {
       email: email.current.value,
       password: password.current.value,
@@ -18,10 +17,11 @@ const Login = () => {
     console.log(payload);
 
     try {
-      await login(payload);
+      await axios.post("/register", payload);
       Swal.fire({ icon: "success", title: "Success!" });
-      navigate("/");
+      navigate("/login");
     } catch (error) {
+      console.log(error);
       let message = error.response?.data || error.message;
       Swal.fire({ icon: "error", title: "Error!", text: message });
     }
@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="m-auto pt-20 max-w-[600px] h-full">
       <div>
-        <h1 className="loginHeading">Login</h1>
+        <h1 className="loginHeading">Register</h1>
         <div>
           <input
             type="email"
@@ -44,13 +44,7 @@ const Login = () => {
             placeholder="Password"
             ref={password}
           />
-          <div className="flex justify-between font-extralight mt-2">
-            <span>Forget password?</span>
-            <span>
-              <Link to="/register">Registration</Link>
-            </span>
-          </div>
-          <button className="loginButton" onClick={loginSubmit}>
+          <button className="loginButton" onClick={handleRegister}>
             Login
           </button>
         </div>
@@ -59,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

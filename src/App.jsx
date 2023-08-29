@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Employees from "./pages/Employees";
 import PrivateLayout from "./components/PrivateLayout";
@@ -17,13 +18,14 @@ import EmployeePerformance from "./pages/EmployeePerformance";
 import HealthAndSafety from "./pages/HealthAndSafety";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   Chart.register(CategoryScale);
 
   return (
     <>
-      <Router>
+      <AuthContextProvider>
         <Routes>
           <Route path="/" element={<PrivateLayout />}>
             <Route index element={<Home />} />
@@ -51,9 +53,10 @@ function App() {
 
           <Route element={<PublicLayout />}>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
-      </Router>
+      </AuthContextProvider>
     </>
   );
 }

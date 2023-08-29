@@ -1,11 +1,19 @@
 import PageTitle from "../../components/PageTitle";
 import axios from "axios";
+import { set } from "lodash";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const RecruitmentAndSelection = () => {
   const baseURL = "http://localhost:3000/recruitment-and-selection";
   const [candidates, setCandidates] = useState(null);
+
+  const deleteCandidate = (id) => {
+    axios.delete(`${baseURL}/${id}`).then((response) => {
+      console.log(response);
+    });
+    setCandidates(candidates.filter((candidate) => candidate.id !== id));
+  };
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -48,12 +56,12 @@ const RecruitmentAndSelection = () => {
               >
                 Edit
               </Link>
-              <Link
-                className="block bg-red-500 rounded-md my-2"
-                to={`delete/${candidate.id}`}
+              <button
+                className="block bg-red-500 rounded-md my-2 w-full"
+                onClick={() => deleteCandidate(candidate.id)}
               >
                 Delete
-              </Link>
+              </button>
             </td>
           </tr>
         ))}

@@ -8,6 +8,9 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "backend": "json-server db.json -m ./node_modules/json-server-auth"
+  },
+  "test": {
     "backend": "json-server --watch db.json"
   },
   "dependencies": {
@@ -15,11 +18,14 @@
     "chart.js": "^4.3.1",
     "dayjs": "^1.11.9",
     "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1"
+    "react-router-dom": "^6.4.1",
+    "sweetalert2": "^11.7.27",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

@@ -1,20 +1,23 @@
+import { useContext, useEffect } from "react";
 import { Outlet } from "react-router";
 import Star from "../../assets/Star2.svg";
 import Search from "../../assets/search-normal.svg";
 import SettingsImg from "../../assets/settingpic.svg";
 import NotificationImg from "../../assets/notification.svg";
 import ProfileImg from "../../assets/profilepic.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./index.css";
-import { useNavigate } from "react-router-dom";
+import AuthContext from "../../context/AuthContext";
 
 const PrivateLayout = () => {
+  const { token, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  function logout() {
-    navigate("/login");
-  }
+  const handleLogout = async () => {
+    await logout();
+  };
+
   const sidebarLinks = [
     {
       path: "/",
@@ -74,6 +77,12 @@ const PrivateLayout = () => {
   const path = location.pathname;
   const activeLinkIndex = sidebarLinks.findIndex((link) => link.path === path);
 
+  useEffect(() => {
+    if (!token) {
+      return navigate("/login");
+    }
+  }, []);
+
   return (
     <>
       <aside>
@@ -120,7 +129,7 @@ const PrivateLayout = () => {
               <img
                 src={ProfileImg}
                 alt="Profile"
-                onClick={logout}
+                onClick={() => handleLogout()}
                 className="cursor-pointer"
               />
             </li>
