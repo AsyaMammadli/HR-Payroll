@@ -45,7 +45,7 @@ const Register = () => {
             ref={password}
           />
           <button className="loginButton" onClick={handleRegister}>
-            Login
+            Submit
           </button>
         </div>
       </div>
